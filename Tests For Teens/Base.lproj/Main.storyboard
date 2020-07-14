@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gzf-dR-KeY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gzf-dR-KeY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tests_For_Teens" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +59,6 @@
         <!--Navigation Controller-->
         <scene sceneID="rQM-q7-jae">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r42-QH-88l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gzf-dR-KeY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="llB-i5-6X9">
@@ -71,13 +70,14 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="IK8-yN-otf"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r42-QH-88l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1647.826086956522" y="-188.16964285714286"/>
         </scene>
         <!--Depression Test-->
         <scene sceneID="hxd-mF-fPh">
             <objects>
-                <viewController title="Depression Test" id="ugI-ny-cUE" sceneMemberID="viewController">
+                <viewController title="Depression Test" id="ugI-ny-cUE" customClass="ViewController" customModule="Tests_For_Teens" propertyAccessControl="all" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zoZ-Hh-Ww0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,9 +105,7 @@ following problems?</string>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                         <state key="normal" title="ansD1"/>
                                         <connections>
-                                            <action selector="action:" destination="KyK-wb-jg2" eventType="touchUpInside" id="pa8-Zo-00P"/>
-                                            <action selector="ansD1:" destination="KyK-wb-jg2" eventType="touchUpInside" id="6Oe-oN-OmQ"/>
-                                            <action selector="button:" destination="KyK-wb-jg2" eventType="touchUpInside" id="ImT-RV-wJf"/>
+                                            <action selector="action:" destination="ugI-ny-cUE" eventType="touchUpInside" id="xKt-1U-zou"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwK-fP-cFu">
@@ -115,10 +113,7 @@ following problems?</string>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                         <state key="normal" title="ansD2"/>
                                         <connections>
-                                            <action selector="action2:" destination="KyK-wb-jg2" eventType="touchUpInside" id="BMn-8G-6u5"/>
-                                            <action selector="action:" destination="KyK-wb-jg2" eventType="touchUpInside" id="k3I-ND-obG"/>
-                                            <action selector="ansD2:" destination="KyK-wb-jg2" eventType="touchUpInside" id="cxQ-WO-jTV"/>
-                                            <action selector="button2:" destination="KyK-wb-jg2" eventType="touchUpInside" id="mf5-MI-nwW"/>
+                                            <action selector="action:" destination="ugI-ny-cUE" eventType="touchUpInside" id="3Iu-sI-ALW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNF-yB-xf3">
@@ -126,8 +121,7 @@ following problems?</string>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                         <state key="normal" title="ansD3"/>
                                         <connections>
-                                            <action selector="ansD3:" destination="KyK-wb-jg2" eventType="touchUpInside" id="rMi-hA-Aut"/>
-                                            <action selector="button3:" destination="KyK-wb-jg2" eventType="touchUpInside" id="Qfs-xW-z3C"/>
+                                            <action selector="action:" destination="ugI-ny-cUE" eventType="touchUpInside" id="y2h-vv-4VN"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSV-xH-ME2">
@@ -135,8 +129,7 @@ following problems?</string>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                         <state key="normal" title="ansD4"/>
                                         <connections>
-                                            <action selector="ansD4:" destination="KyK-wb-jg2" eventType="touchUpInside" id="SbS-4e-ole"/>
-                                            <action selector="button4:" destination="KyK-wb-jg2" eventType="touchUpInside" id="XqA-WD-JGF"/>
+                                            <action selector="action:" destination="ugI-ny-cUE" eventType="touchUpInside" id="cc7-4Z-I3D"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -159,12 +152,13 @@ following problems?</string>
                     </view>
                     <navigationItem key="navigationItem" id="mJY-tL-Zbi"/>
                     <connections>
+                        <outlet property="lbl" destination="Edp-t7-so2" id="hlV-2i-A3d"/>
+                        <outlet property="view" destination="zoZ-Hh-Ww0" id="gZr-sO-eEy"/>
                         <segue destination="8Hb-W5-K45" kind="show" id="KW8-LW-j5p"/>
                         <segue destination="bxj-eN-SXs" kind="show" id="841-2U-7Bc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dww-2M-907" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="KyK-wb-jg2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3325" y="-188"/>
         </scene>
@@ -225,13 +219,13 @@ If you feel like your feelings, thoughts, or behaviors get worse, screen again</
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jok-eS-7BV">
                                 <rect key="frame" x="20" y="158" width="374" height="825"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <mutableString key="text">Your results indicate that you may be experiencing some symptoms of mild depression. While your symptoms are not likely having a major impact on your life, it is important to monitor them.
+                                <string key="text">Your results indicate that you may be experiencing some symptoms of mild depression. While your symptoms are not likely having a major impact on your life, it is important to monitor them.
 
 These results do not mean that you have depression, but it may be time to start a conversation with someone you trust. If you are interested in learning more, check out the links below.
 
 This screen is not meant to be a diagnosis. Diagnosis and care of mental health conditions can be difficult. Having symptoms of depression is different than having depression. In addition, symptoms of depression can be caused by other mental health conditions, such as bipolar disorder, or other health problems, like a thyroid disorder. A trained professional, such as a doctor or a mental health provider, can make this determination and finding the right support can help you feel more like you again.
 
-The depression symptoms you are experiencing may also indicate a different type of mental health problem related to bipolar disorder. We recommend you also take the screen for bipolar disorder to find out if your symptoms may be more similar to those experienced by people with bipolar disorder.  People who struggle with bipolar disorder experience mood swings from extreme elation, energy, or agitation to low depressive symptoms.</mutableString>
+The depression symptoms you are experiencing may also indicate a different type of mental health problem related to bipolar disorder. We recommend you also take the screen for bipolar disorder to find out if your symptoms may be more similar to those experienced by people with bipolar disorder.  People who struggle with bipolar disorder experience mood swings from extreme elation, energy, or agitation to low depressive symptoms.</string>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
