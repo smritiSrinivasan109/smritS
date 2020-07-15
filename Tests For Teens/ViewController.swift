@@ -88,13 +88,13 @@ class ViewController: UIViewController {
             
             var button:UIButton  = view.viewWithTag(i) as! UIButton
             
-            if (i == Int(ansD4)) {
+            if (i == Int(ansD1)) {
                 button.setTitle(answersD[currentDQuestion][0], for: .normal)
-            } else if (i == Int(ansD3)) {
-                button.setTitle(answersD[currentDQuestion][1], for: .normal)
             } else if (i == Int(ansD2)) {
+                button.setTitle(answersD[currentDQuestion][1], for: .normal)
+            } else if (i == Int(ansD3)) {
                 button.setTitle(answersD[currentDQuestion][2], for: .normal)
-            } else if (i == Int(ansD1)) {
+            } else if (i == Int(ansD4)) {
                 button.setTitle(answersD[currentDQuestion][3], for: .normal)
             } else {
                 button.setTitle(answersD[currentDQuestion][4], for: .normal)
@@ -108,15 +108,15 @@ class ViewController: UIViewController {
     
     func endQuiz () {
         if (scoreD >= 0 && scoreD <= 4) {
-            performSegue(withIdentifier: "Minimal Depression", sender: self)
+            performSegue(withIdentifier: "MinimalDepression", sender: self)
         } else if scoreD >= 5 && scoreD <= 9 {
-            performSegue(withIdentifier: "Mild Depression", sender: self)
+            performSegue(withIdentifier: "MildDepression", sender: self)
         } else if scoreD >= 10 && scoreD <= 14 {
-            performSegue(withIdentifier: "Moderate Depression", sender: self)
+            performSegue(withIdentifier: "ModerateDepression", sender: self)
         }  else if scoreD >= 15 && scoreD <= 19 {
-            performSegue(withIdentifier: "Moderately Severe Depression", sender: self)
+            performSegue(withIdentifier: "ModeratelySevereDepression", sender: self)
         } else if scoreD >= 20  && scoreD <= 27 {
-            performSegue(withIdentifier: "Severe Depression", sender: self)
+            performSegue(withIdentifier: "SevereDepression", sender: self)
         }
     }
 }

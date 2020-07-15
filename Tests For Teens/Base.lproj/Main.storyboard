@@ -154,18 +154,18 @@ following problems?</string>
                     <connections>
                         <outlet property="lbl" destination="Edp-t7-so2" id="hlV-2i-A3d"/>
                         <outlet property="view" destination="zoZ-Hh-Ww0" id="gZr-sO-eEy"/>
-                        <segue destination="8Hb-W5-K45" kind="show" id="KW8-LW-j5p"/>
-                        <segue destination="bxj-eN-SXs" kind="show" id="841-2U-7Bc"/>
+                        <segue destination="8Hb-W5-K45" kind="show" identifier="MinimalDepression" id="fFa-8w-ksk"/>
+                        <segue destination="bxj-eN-SXs" kind="show" identifier="MildDepression" id="yy1-p0-BVz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dww-2M-907" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3325" y="-188"/>
         </scene>
-        <!--minimalDepression-->
+        <!--MinimalDepression-->
         <scene sceneID="TIt-So-YT9">
             <objects>
-                <viewController title="minimalDepression" id="8Hb-W5-K45" sceneMemberID="viewController">
+                <viewController title="MinimalDepression" id="8Hb-W5-K45" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FRZ-xf-q06">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -201,10 +201,10 @@ If you feel like your feelings, thoughts, or behaviors get worse, screen again</
             </objects>
             <point key="canvasLocation" x="4027.5362318840585" y="-188.16964285714286"/>
         </scene>
-        <!--mildDepression-->
+        <!--MildDepression-->
         <scene sceneID="uFD-Qv-PL0">
             <objects>
-                <viewController title="mildDepression" id="bxj-eN-SXs" sceneMemberID="viewController">
+                <viewController title="MildDepression" id="bxj-eN-SXs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zmi-hy-DAb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
