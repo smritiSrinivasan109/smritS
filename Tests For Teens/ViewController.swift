@@ -108,15 +108,15 @@ class ViewController: UIViewController {
     
     func endQuiz () {
         if (scoreD >= 0 && scoreD <= 4) {
-            performSegue(withIdentifier: "MinimalDepression", sender: self)
+            performSegue(withIdentifier: "minimalDepression", sender: self)
         } else if scoreD >= 5 && scoreD <= 9 {
-            performSegue(withIdentifier: "MildDepression", sender: self)
+            performSegue(withIdentifier: "mildDepression", sender: self)
         } else if scoreD >= 10 && scoreD <= 14 {
-            performSegue(withIdentifier: "ModerateDepression", sender: self)
+            performSegue(withIdentifier: "moderateDepression", sender: self)
         }  else if scoreD >= 15 && scoreD <= 19 {
-            performSegue(withIdentifier: "ModeratelySevereDepression", sender: self)
+            performSegue(withIdentifier: "moderatelySevereDepression", sender: self)
         } else if scoreD >= 20  && scoreD <= 27 {
-            performSegue(withIdentifier: "SevereDepression", sender: self)
+            performSegue(withIdentifier: "severeDepression", sender: self)
         }
     }
 }
