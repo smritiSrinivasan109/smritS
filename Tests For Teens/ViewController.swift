@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // DEPRESSION TEST
+    
     // variables
     var currentDQuestion = 0
     var ansD1 = 1
@@ -17,21 +19,28 @@ class ViewController: UIViewController {
     var ansD3 = 3
     var ansD4 = 4
     var scoreD = 0
+    
     // label
-   
-
     @IBOutlet weak var lbl: UILabel!
     
     @IBOutlet var view1: UIView!
     
     let questionsD = ["1. Little interest or pleasure in doing things","2. Feeling down, depressed, or hopeless","3. Trouble falling or staying asleep, or sleeping too much","4. Feeling tired or having little energy","5. Poor appetite or overeating","6. Feeling bad about yourself - or that you are a failure or have let yourself or your family down","7. Trouble concentrating on things, such as reading the newspaper or watching television","8. Moving or speaking so slowly that other people could have noticed (Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual)","9. Thoughts that you would be better off dead, or of hurting yourself","10. If you checked off any problems, how difficult have these problems made it for you at work, home, or with other people?"]
        
-   let answersD = [["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"], ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"], ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"], ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"], ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"], ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"], ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"], ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"], ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"], ["Not difficult at all: 1", "Somewhat difficult: 2", "Very difficult: 3", "Extremely difficult: 4"]]
+   let answersD = [["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"],
+    ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"],
+    ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"],
+    ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"],
+    ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"],
+    ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"],
+    ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"],
+    ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"],
+    ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"],
+    ["Not difficult at all: 1", "Somewhat difficult: 2", "Very difficult: 3", "Extremely difficult: 4"]]
     
     
    
     @IBAction func action(_ sender: UIButton) {
-        print("I was called")
         guard let button = sender as? UIButton else {
             return
         }
@@ -47,18 +56,16 @@ class ViewController: UIViewController {
             scoreD += 3
         default:
             break
+            
         }
         
         if (currentDQuestion != questionsD.count) {
             newDQuestion()
-        } else if currentDQuestion == questionsD.count {
+        } else if currentDQuestion == questionsD.count {            
             endQuiz() // this will have the end result & the resources
+            currentDQuestion=0
         }
     }
-   
-   
-    
-   
     
     override func viewDidAppear(_ animated: Bool) {
         newDQuestion()
@@ -66,41 +73,36 @@ class ViewController: UIViewController {
                   
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
    
     // creating the function that calls new question
-
     func newDQuestion() {
-        print(currentDQuestion)
-        print(questionsD[0])
         
         lbl.text = questionsD[currentDQuestion]
-    
-    
-        //var button:UIButton = UIButton()
-        var x = 1
     
         for i in 1...4{
             
             // create a button
-            
             var button:UIButton  = view.viewWithTag(i) as! UIButton
             
             if (i == Int(ansD1)) {
                 button.setTitle(answersD[currentDQuestion][0], for: .normal)
+        
             } else if (i == Int(ansD2)) {
                 button.setTitle(answersD[currentDQuestion][1], for: .normal)
+          
             } else if (i == Int(ansD3)) {
                 button.setTitle(answersD[currentDQuestion][2], for: .normal)
+             
             } else if (i == Int(ansD4)) {
                 button.setTitle(answersD[currentDQuestion][3], for: .normal)
+            
             } else {
                 button.setTitle(answersD[currentDQuestion][4], for: .normal)
-                x=2
             }
         }
+        
         
         currentDQuestion += 1
     
@@ -117,8 +119,10 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "moderatelySevereDepression", sender: self)
         } else if scoreD >= 20  && scoreD <= 27 {
             performSegue(withIdentifier: "severeDepression", sender: self)
+
         }
     }
+   
 }
 
 

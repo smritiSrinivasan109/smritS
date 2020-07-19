@@ -32,6 +32,9 @@
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="39"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Anxiety Test"/>
+                                        <connections>
+                                            <segue destination="qCF-e5-equ" kind="show" id="vSN-kQ-NSp"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOa-T2-1Sf">
                                         <rect key="frame" x="0.0" y="138" width="273" height="63"/>
@@ -77,7 +80,7 @@
         <!--Depression Test-->
         <scene sceneID="hxd-mF-fPh">
             <objects>
-                <viewController title="Depression Test" id="ugI-ny-cUE" customClass="ViewController" customModule="Tests_For_Teens" propertyAccessControl="all" sceneMemberID="viewController">
+                <viewController title="Depression Test" id="ugI-ny-cUE" customClass="ViewController" customModule="Tests_For_Teens" propertyAccessControl="none" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zoZ-Hh-Ww0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -153,25 +156,34 @@ following problems?</string>
                     <navigationItem key="navigationItem" id="mJY-tL-Zbi"/>
                     <connections>
                         <outlet property="lbl" destination="Edp-t7-so2" id="hlV-2i-A3d"/>
-                        <outlet property="view" destination="zoZ-Hh-Ww0" id="gZr-sO-eEy"/>
-                        <segue destination="8Hb-W5-K45" kind="show" identifier="MinimalDepression" id="fFa-8w-ksk"/>
-                        <segue destination="bxj-eN-SXs" kind="show" identifier="MildDepression" id="yy1-p0-BVz"/>
+                        <segue destination="8Hb-W5-K45" kind="show" identifier="minimalDepression" id="KW8-LW-j5p"/>
+                        <segue destination="bxj-eN-SXs" kind="show" identifier="mildDepression" id="841-2U-7Bc"/>
+                        <segue destination="DDS-YE-DH3" kind="show" identifier="moderateDepression" id="cOL-5y-Cz7"/>
+                        <segue destination="2IC-uK-mqi" kind="show" identifier="moderatelySevereDepression" id="BRW-eC-xIX"/>
+                        <segue destination="jlk-mn-pX8" kind="show" identifier="severeDepression" id="XmK-qN-PGJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dww-2M-907" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3325" y="-188"/>
+            <point key="canvasLocation" x="3320" y="-188"/>
         </scene>
-        <!--MinimalDepression-->
+        <!--minimalDepression-->
         <scene sceneID="TIt-So-YT9">
             <objects>
-                <viewController title="MinimalDepression" id="8Hb-W5-K45" sceneMemberID="viewController">
+                <viewController title="minimalDepression" id="8Hb-W5-K45" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FRZ-xf-q06">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Minimal Depression" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9K-vy-Jgs">
+                                <rect key="frame" x="0.0" y="200" width="414" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcs-2X-J8t">
-                                <rect key="frame" x="20" y="213" width="374" height="462"/>
+                                <rect key="frame" x="45" y="217" width="324" height="462"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Your results indicate that you have none, or very few symptoms of depression.
 
@@ -184,13 +196,6 @@ If you feel like your feelings, thoughts, or behaviors get worse, screen again</
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Minimal Depression" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9K-vy-Jgs">
-                                <rect key="frame" x="0.0" y="200" width="414" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="253-zA-NgW"/>
@@ -199,12 +204,90 @@ If you feel like your feelings, thoughts, or behaviors get worse, screen again</
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wU0-6P-yyh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4027.5362318840585" y="-188.16964285714286"/>
+            <point key="canvasLocation" x="4025" y="-121"/>
         </scene>
-        <!--MildDepression-->
+        <!--minimalAnxiety-->
+        <scene sceneID="5B6-wQ-6zn">
+            <objects>
+                <viewController title="minimalAnxiety" id="a8m-GR-ivf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oOG-2T-Wre">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Minimal Anxiety" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rw5-KF-Qgn">
+                                <rect key="frame" x="0.0" y="200" width="414" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vix-rt-zGG">
+                                <rect key="frame" x="45" y="217" width="324" height="462"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Your results indicate that you have none, or very few symptoms of depression.
+
+If you notice that your symptoms aren't improving, you may want to bring them up with someone you trust.
+
+This screen is not meant to be a diagnosis, or the elimination of a diagnosis.  A trained medical or mental health professional can help clarify issues and diagnose depression.
+
+If you feel like your feelings, thoughts, or behaviors get worse, screen again</string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="AtV-23-gpj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Tht-nt-ybG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jqr-ud-edG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4025" y="542"/>
+        </scene>
+        <!--moderateDepression-->
+        <scene sceneID="Chi-td-JU3">
+            <objects>
+                <viewController title="moderateDepression" id="DDS-YE-DH3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fpu-1g-FjI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Moderate Depression" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qR9-gg-b8H">
+                                <rect key="frame" x="0.0" y="200" width="414" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXI-1f-WG7">
+                                <rect key="frame" x="45" y="217" width="324" height="462"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Your results indicate that you have none, or very few symptoms of depression.
+
+If you notice that your symptoms aren't improving, you may want to bring them up with someone you trust.
+
+This screen is not meant to be a diagnosis, or the elimination of a diagnosis.  A trained medical or mental health professional can help clarify issues and diagnose depression.
+
+If you feel like your feelings, thoughts, or behaviors get worse, screen again</string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="qG4-Nu-l0f"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fwK-Go-yu3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gfa-xI-8Zm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5487" y="-121"/>
+        </scene>
+        <!--mildDepression-->
         <scene sceneID="uFD-Qv-PL0">
             <objects>
-                <viewController title="MildDepression" id="bxj-eN-SXs" sceneMemberID="viewController">
+                <viewController title="mildDepression" id="bxj-eN-SXs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zmi-hy-DAb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -230,6 +313,20 @@ The depression symptoms you are experiencing may also indicate a different type 
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yt6-Si-Rch">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mpa-5L-3lx">
+                                        <rect key="frame" x="0.0" y="-8" width="414" height="774"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="pIT-F7-Ixk"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="wk1-FS-k3l"/>
+                                    </scrollView>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="C2k-d6-Fas"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="W0u-jv-5Nk"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ZZa-Cd-YXO"/>
@@ -238,7 +335,172 @@ The depression symptoms you are experiencing may also indicate a different type 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="00v-6m-cZz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4714.4927536231889" y="-188.16964285714286"/>
+            <point key="canvasLocation" x="4736" y="-92"/>
+        </scene>
+        <!--moderatelySevereDepression-->
+        <scene sceneID="msQ-Es-GiK">
+            <objects>
+                <viewController title="moderatelySevereDepression" id="2IC-uK-mqi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uAY-jg-ikR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqF-dh-ybW">
+                                <rect key="frame" x="45" y="217" width="324" height="462"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Your results indicate that you have none, or very few symptoms of depression.
+
+If you notice that your symptoms aren't improving, you may want to bring them up with someone you trust.
+
+This screen is not meant to be a diagnosis, or the elimination of a diagnosis.  A trained medical or mental health professional can help clarify issues and diagnose depression.
+
+If you feel like your feelings, thoughts, or behaviors get worse, screen again</string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Moderately Severe Depression" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDY-wo-kyl">
+                                <rect key="frame" x="33" y="171" width="348" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="nAn-3O-XKW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IEb-9h-1Ng"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tVo-eA-uNn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6228" y="-32"/>
+        </scene>
+        <!--severeDepression-->
+        <scene sceneID="qd0-qS-2zZ">
+            <objects>
+                <viewController title="severeDepression" id="jlk-mn-pX8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ve4-hP-lXZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Severe Depression" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPS-Ah-T0q">
+                                <rect key="frame" x="85" y="200" width="244" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96z-hf-llz">
+                                <rect key="frame" x="45" y="217" width="324" height="462"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Your results indicate that you have none, or very few symptoms of depression.
+
+If you notice that your symptoms aren't improving, you may want to bring them up with someone you trust.
+
+This screen is not meant to be a diagnosis, or the elimination of a diagnosis.  A trained medical or mental health professional can help clarify issues and diagnose depression.
+
+If you feel like your feelings, thoughts, or behaviors get worse, screen again</string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="0bD-3n-DsM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pc6-7x-Yab"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jUS-OD-mE5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6914" y="-188"/>
+        </scene>
+        <!--Anxiety Test-->
+        <scene sceneID="3wz-vS-bQc">
+            <objects>
+                <viewController title="Anxiety Test" id="qCF-e5-equ" customClass="ViewController" customModule="Tests_For_Teens" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aL8-FM-VCN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCn-sD-bzS">
+                                <rect key="frame" x="55.5" y="113" width="303" height="66.5"/>
+                                <string key="text">Over the last 2 weeks, how often have 
+you been bothered by any of the
+following problems?</string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2t-cr-Iir">
+                                <rect key="frame" x="0.0" y="276" width="414" height="38"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1oa-4p-bjK">
+                                <rect key="frame" x="0.0" y="341" width="414" height="191"/>
+                                <subviews>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XzP-Fs-fHv">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                        <state key="normal" title="ansA1"/>
+                                        <connections>
+                                            <action selector="action:" destination="qCF-e5-equ" eventType="touchUpInside" id="yek-pK-Cra"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaN-D1-vUT">
+                                        <rect key="frame" x="0.0" y="49" width="414" height="44"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                        <state key="normal" title="ansA2"/>
+                                        <connections>
+                                            <action selector="action:" destination="qCF-e5-equ" eventType="touchUpInside" id="1Y9-qx-JOE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hz8-3O-04N">
+                                        <rect key="frame" x="0.0" y="98" width="414" height="44"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                        <state key="normal" title="ansA3"/>
+                                        <connections>
+                                            <action selector="action:" destination="qCF-e5-equ" eventType="touchUpInside" id="YDZ-Sc-VkA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXO-pb-5E2">
+                                        <rect key="frame" x="0.0" y="147" width="414" height="44"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                        <state key="normal" title="ansA4"/>
+                                        <connections>
+                                            <action selector="action:" destination="qCF-e5-equ" eventType="touchUpInside" id="ZFp-Rz-Ejq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gCn-sD-bzS" firstAttribute="top" secondItem="Vth-37-Ln3" secondAttribute="top" constant="25" id="7yA-MN-KJ0"/>
+                            <constraint firstItem="o2t-cr-Iir" firstAttribute="leading" secondItem="Vth-37-Ln3" secondAttribute="leading" id="Bqj-T3-8a7"/>
+                            <constraint firstItem="o2t-cr-Iir" firstAttribute="top" secondItem="gCn-sD-bzS" secondAttribute="bottom" constant="96.5" id="IzE-MM-Pws"/>
+                            <constraint firstItem="1oa-4p-bjK" firstAttribute="leading" secondItem="Vth-37-Ln3" secondAttribute="leading" id="Jfc-Ix-Iby"/>
+                            <constraint firstItem="1oa-4p-bjK" firstAttribute="top" secondItem="o2t-cr-Iir" secondAttribute="bottom" constant="27" id="L2X-6v-zj5"/>
+                            <constraint firstItem="1oa-4p-bjK" firstAttribute="centerX" secondItem="aL8-FM-VCN" secondAttribute="centerX" id="UIH-DA-5r5"/>
+                            <constraint firstItem="o2t-cr-Iir" firstAttribute="centerX" secondItem="aL8-FM-VCN" secondAttribute="centerX" id="iX1-0f-vx9"/>
+                            <constraint firstItem="gCn-sD-bzS" firstAttribute="centerX" secondItem="aL8-FM-VCN" secondAttribute="centerX" id="n0X-3v-7GX"/>
+                            <constraint firstItem="Vth-37-Ln3" firstAttribute="trailing" secondItem="o2t-cr-Iir" secondAttribute="trailing" id="qyy-Fc-yAx"/>
+                            <constraint firstItem="Vth-37-Ln3" firstAttribute="trailing" secondItem="1oa-4p-bjK" secondAttribute="trailing" id="wtF-uo-gaq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vth-37-Ln3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cET-IX-Q6C"/>
+                    <connections>
+                        <outlet property="lbl" destination="o2t-cr-Iir" id="thl-mR-RX5"/>
+                        <outlet property="view" destination="aL8-FM-VCN" id="RoW-Gv-d0v"/>
+                        <segue destination="a8m-GR-ivf" kind="show" id="e1f-EW-loB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jVr-nH-6qu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3319" y="542"/>
         </scene>
     </scenes>
 </document>
