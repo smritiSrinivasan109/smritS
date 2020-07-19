@@ -243,7 +243,7 @@ If you feel like your feelings, thoughts, or behaviors get worse, screen again</
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jqr-ud-edG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4025" y="542"/>
+            <point key="canvasLocation" x="4581" y="542"/>
         </scene>
         <!--moderateDepression-->
         <scene sceneID="Chi-td-JU3">
@@ -418,7 +418,7 @@ If you feel like your feelings, thoughts, or behaviors get worse, screen again</
         <!--Anxiety Test-->
         <scene sceneID="3wz-vS-bQc">
             <objects>
-                <viewController title="Anxiety Test" id="qCF-e5-equ" customClass="ViewController" customModule="Tests_For_Teens" sceneMemberID="viewController">
+                <viewController title="Anxiety Test" id="qCF-e5-equ" customClass="AnxietyController" customModule="Tests_For_Teens" customModuleProvider="target" propertyAccessControl="none" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aL8-FM-VCN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -441,7 +441,7 @@ following problems?</string>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1oa-4p-bjK">
                                 <rect key="frame" x="0.0" y="341" width="414" height="191"/>
                                 <subviews>
-                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XzP-Fs-fHv">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XzP-Fs-fHv">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                         <state key="normal" title="ansA1"/>
@@ -449,7 +449,7 @@ following problems?</string>
                                             <action selector="action:" destination="qCF-e5-equ" eventType="touchUpInside" id="yek-pK-Cra"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaN-D1-vUT">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaN-D1-vUT">
                                         <rect key="frame" x="0.0" y="49" width="414" height="44"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                         <state key="normal" title="ansA2"/>
@@ -457,7 +457,7 @@ following problems?</string>
                                             <action selector="action:" destination="qCF-e5-equ" eventType="touchUpInside" id="1Y9-qx-JOE"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hz8-3O-04N">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hz8-3O-04N">
                                         <rect key="frame" x="0.0" y="98" width="414" height="44"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                         <state key="normal" title="ansA3"/>
@@ -465,7 +465,7 @@ following problems?</string>
                                             <action selector="action:" destination="qCF-e5-equ" eventType="touchUpInside" id="YDZ-Sc-VkA"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXO-pb-5E2">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXO-pb-5E2">
                                         <rect key="frame" x="0.0" y="147" width="414" height="44"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                         <state key="normal" title="ansA4"/>
@@ -494,8 +494,7 @@ following problems?</string>
                     <navigationItem key="navigationItem" id="cET-IX-Q6C"/>
                     <connections>
                         <outlet property="lbl" destination="o2t-cr-Iir" id="thl-mR-RX5"/>
-                        <outlet property="view" destination="aL8-FM-VCN" id="RoW-Gv-d0v"/>
-                        <segue destination="a8m-GR-ivf" kind="show" id="e1f-EW-loB"/>
+                        <segue destination="a8m-GR-ivf" kind="show" identifier="minimalAnxiety" id="kCQ-wX-tpu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jVr-nH-6qu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
