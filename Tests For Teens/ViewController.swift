@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     
     let questionsD = ["1. Little interest or pleasure in doing things","2. Feeling down, depressed, or hopeless","3. Trouble falling or staying asleep, or sleeping too much","4. Feeling tired or having little energy","5. Poor appetite or overeating","6. Feeling bad about yourself - or that you are a failure or have let yourself or your family down","7. Trouble concentrating on things, such as reading the newspaper or watching television","8. Moving or speaking so slowly that other people could have noticed (Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual)","9. Thoughts that you would be better off dead, or of hurting yourself","10. If you checked off any problems, how difficult have these problems made it for you at work, home, or with other people?"]
        
-   let answersD = [["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"],
+   let answersD = [
     ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"],
     ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"],
     ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"],
@@ -36,7 +36,9 @@ class ViewController: UIViewController {
     ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"],
     ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"],
     ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"],
-    ["Not difficult at all: 1", "Somewhat difficult: 2", "Very difficult: 3", "Extremely difficult: 4"]]
+    ["Not at all: 1", "Several days: 2", "More than half the days: 3", "Nearly every day: 4"],
+    ["Not difficult at all: 1", "Somewhat difficult: 2", "Very difficult: 3", "Extremely difficult: 4"]
+    ]
     
     
    
@@ -61,9 +63,10 @@ class ViewController: UIViewController {
         
         if (currentDQuestion != questionsD.count) {
             newDQuestion()
-        } else if currentDQuestion == questionsD.count {            
-            endQuiz() // this will have the end result & the resources
+        } else if currentDQuestion == questionsD.count {
+            endDepressionQuiz() // this will have the end result & the resources
             currentDQuestion=0
+            scoreD=0
         }
     }
     
@@ -97,9 +100,6 @@ class ViewController: UIViewController {
              
             } else if (i == Int(ansD4)) {
                 button.setTitle(answersD[currentDQuestion][3], for: .normal)
-            
-            } else {
-                button.setTitle(answersD[currentDQuestion][4], for: .normal)
             }
         }
         
@@ -108,7 +108,8 @@ class ViewController: UIViewController {
     
     }
     
-    func endQuiz () {
+    func endDepressionQuiz () {
+
         if (scoreD >= 0 && scoreD <= 4) {
             performSegue(withIdentifier: "minimalDepression", sender: self)
         } else if scoreD >= 5 && scoreD <= 9 {
@@ -117,7 +118,7 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "moderateDepression", sender: self)
         }  else if scoreD >= 15 && scoreD <= 19 {
             performSegue(withIdentifier: "moderatelySevereDepression", sender: self)
-        } else if scoreD >= 20  && scoreD <= 27 {
+        } else if scoreD >= 20  {
             performSegue(withIdentifier: "severeDepression", sender: self)
 
         }

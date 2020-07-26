@@ -41,13 +41,26 @@
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="39"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Insomnia Test"/>
+                                        <connections>
+                                            <segue destination="jQ9-9E-Tbc" kind="show" id="tB2-Uy-ioj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="These tests have been taken from MHA and The London Sleep Centre" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ow-ym-0oR">
+                                <rect key="frame" x="0.0" y="600" width="414" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="8ow-ym-0oR" firstAttribute="top" secondItem="Fnj-9i-f24" secondAttribute="bottom" constant="51.5" id="4FC-ad-Ev3"/>
+                            <constraint firstItem="8ow-ym-0oR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7MS-Zc-eXE"/>
                             <constraint firstItem="Fnj-9i-f24" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HiJ-PE-Wf9"/>
+                            <constraint firstAttribute="trailing" secondItem="8ow-ym-0oR" secondAttribute="trailing" id="O8c-Rl-s9C"/>
+                            <constraint firstItem="8ow-ym-0oR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dXJ-s2-Mty"/>
                             <constraint firstItem="Fnj-9i-f24" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e7D-gy-71B"/>
                             <constraint firstItem="Fnj-9i-f24" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vtE-Tx-ciG"/>
                         </constraints>
@@ -75,7 +88,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r42-QH-88l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1647.826086956522" y="-188.16964285714286"/>
+            <point key="canvasLocation" x="1716" y="-188"/>
         </scene>
         <!--Depression Test-->
         <scene sceneID="hxd-mF-fPh">
@@ -157,10 +170,10 @@ following problems?</string>
                     <connections>
                         <outlet property="lbl" destination="Edp-t7-so2" id="hlV-2i-A3d"/>
                         <segue destination="8Hb-W5-K45" kind="show" identifier="minimalDepression" id="KW8-LW-j5p"/>
-                        <segue destination="bxj-eN-SXs" kind="show" identifier="mildDepression" id="841-2U-7Bc"/>
                         <segue destination="DDS-YE-DH3" kind="show" identifier="moderateDepression" id="cOL-5y-Cz7"/>
                         <segue destination="2IC-uK-mqi" kind="show" identifier="moderatelySevereDepression" id="BRW-eC-xIX"/>
                         <segue destination="jlk-mn-pX8" kind="show" identifier="severeDepression" id="XmK-qN-PGJ"/>
+                        <segue destination="C09-Pp-6ef" kind="show" identifier="mildDepression" id="T24-ZG-lJn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dww-2M-907" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -204,7 +217,7 @@ If you feel like your feelings, thoughts, or behaviors get worse, screen again</
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wU0-6P-yyh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4025" y="-121"/>
+            <point key="canvasLocation" x="4042" y="-188"/>
         </scene>
         <!--minimalAnxiety-->
         <scene sceneID="5B6-wQ-6zn">
@@ -222,15 +235,15 @@ If you feel like your feelings, thoughts, or behaviors get worse, screen again</
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vix-rt-zGG">
-                                <rect key="frame" x="45" y="217" width="324" height="462"/>
+                                <rect key="frame" x="20" y="284" width="374" height="329"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Your results indicate that you have none, or very few symptoms of depression.
+                                <string key="text">Your results indicate that you have none or very few symptoms of anxiety.
 
-If you notice that your symptoms aren't improving, you may want to bring them up with someone you trust.
+If you notice that your symptoms aren't improving or get worse, you may want to bring them up with someone you trust or rescreen.
 
-This screen is not meant to be a diagnosis, or the elimination of a diagnosis.  A trained medical or mental health professional can help clarify issues and diagnose depression.
+This screen is not meant to be a diagnosis, or the elimination of a diagnosis.  A trained medical professional can diagnose anxiety.
 
-If you feel like your feelings, thoughts, or behaviors get worse, screen again</string>
+If you feel like your feelings, thoughts, or behaviors get worse, screen again. </string>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -243,182 +256,213 @@ If you feel like your feelings, thoughts, or behaviors get worse, screen again</
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jqr-ud-edG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4581" y="542"/>
+            <point key="canvasLocation" x="4040.579710144928" y="541.74107142857144"/>
         </scene>
         <!--moderateDepression-->
         <scene sceneID="Chi-td-JU3">
             <objects>
                 <viewController title="moderateDepression" id="DDS-YE-DH3" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fpu-1g-FjI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Moderate Depression" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qR9-gg-b8H">
-                                <rect key="frame" x="0.0" y="200" width="414" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXI-1f-WG7">
-                                <rect key="frame" x="45" y="217" width="324" height="462"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Your results indicate that you have none, or very few symptoms of depression.
-
-If you notice that your symptoms aren't improving, you may want to bring them up with someone you trust.
-
-This screen is not meant to be a diagnosis, or the elimination of a diagnosis.  A trained medical or mental health professional can help clarify issues and diagnose depression.
-
-If you feel like your feelings, thoughts, or behaviors get worse, screen again</string>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="qG4-Nu-l0f"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="fwK-Go-yu3"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gfa-xI-8Zm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5487" y="-121"/>
-        </scene>
-        <!--mildDepression-->
-        <scene sceneID="uFD-Qv-PL0">
-            <objects>
-                <viewController title="mildDepression" id="bxj-eN-SXs" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Zmi-hy-DAb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mild Depression" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUe-q8-Ey1">
-                                <rect key="frame" x="0.0" y="112" width="414" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jok-eS-7BV">
-                                <rect key="frame" x="20" y="158" width="374" height="825"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Your results indicate that you may be experiencing some symptoms of mild depression. While your symptoms are not likely having a major impact on your life, it is important to monitor them.
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jy-hV-xLe">
+                                <rect key="frame" x="0.0" y="88" width="414" height="912"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NlW-XL-HJw">
+                                        <rect key="frame" x="8" y="0.0" width="398" height="912"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Moderate Depression" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LO-Kp-FAx">
+                                                <rect key="frame" x="-16" y="36" width="414" height="53"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gor-nF-cQv">
+                                                <rect key="frame" x="4" y="97" width="394" height="740"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <mutableString key="text">Your results indicate that you may be experiencing symptoms of moderate depression. Based on your answers, living with these symptoms could be causing difficulty managing relationships and even the tasks of everyday life.
 
 These results do not mean that you have depression, but it may be time to start a conversation with someone you trust. If you are interested in learning more, check out the links below.
 
 This screen is not meant to be a diagnosis. Diagnosis and care of mental health conditions can be difficult. Having symptoms of depression is different than having depression. In addition, symptoms of depression can be caused by other mental health conditions, such as bipolar disorder, or other health problems, like a thyroid disorder. A trained professional, such as a doctor or a mental health provider, can make this determination and finding the right support can help you feel more like you again.
 
-The depression symptoms you are experiencing may also indicate a different type of mental health problem related to bipolar disorder. We recommend you also take the screen for bipolar disorder to find out if your symptoms may be more similar to those experienced by people with bipolar disorder.  People who struggle with bipolar disorder experience mood swings from extreme elation, energy, or agitation to low depressive symptoms.</string>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yt6-Si-Rch">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mpa-5L-3lx">
-                                        <rect key="frame" x="0.0" y="-8" width="414" height="774"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <viewLayoutGuide key="contentLayoutGuide" id="pIT-F7-Ixk"/>
-                                        <viewLayoutGuide key="frameLayoutGuide" id="wk1-FS-k3l"/>
-                                    </scrollView>
+The depression symptoms you are experiencing may also indicate a different type of mental health problem related to bipolar disorder. We recommend you also take the screen for bipolar disorder to find out if your symptoms may be more similar to those experienced by people with bipolar disorder.  People who struggle with bipolar disorder experience mood swings from extreme elation, energy, or agitation to low depressive symptoms.</mutableString>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
                                 </subviews>
-                                <viewLayoutGuide key="contentLayoutGuide" id="C2k-d6-Fas"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="W0u-jv-5Nk"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="NlW-XL-HJw" secondAttribute="bottom" id="6iW-8J-oCS"/>
+                                    <constraint firstItem="NlW-XL-HJw" firstAttribute="leading" secondItem="2jy-hV-xLe" secondAttribute="leading" constant="8" id="LCf-2C-HRR"/>
+                                    <constraint firstItem="NlW-XL-HJw" firstAttribute="width" secondItem="2jy-hV-xLe" secondAttribute="width" multiplier="0.961353" id="eFl-lu-re4"/>
+                                    <constraint firstItem="NlW-XL-HJw" firstAttribute="top" secondItem="2jy-hV-xLe" secondAttribute="top" id="jKu-a0-YXD"/>
+                                    <constraint firstItem="NlW-XL-HJw" firstAttribute="height" secondItem="2jy-hV-xLe" secondAttribute="height" priority="250" id="tJL-60-z1g"/>
+                                    <constraint firstAttribute="trailing" secondItem="NlW-XL-HJw" secondAttribute="trailing" constant="8" id="vf8-5t-0We"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="tK8-K6-UZs"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="nfJ-ix-0Ih"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="ZZa-Cd-YXO"/>
+                        <constraints>
+                            <constraint firstItem="2jy-hV-xLe" firstAttribute="bottom" secondItem="qG4-Nu-l0f" secondAttribute="bottom" constant="34" id="0Sq-fM-JVB"/>
+                            <constraint firstItem="qG4-Nu-l0f" firstAttribute="trailing" secondItem="2jy-hV-xLe" secondAttribute="trailing" id="ICB-qO-RhG"/>
+                            <constraint firstItem="2jy-hV-xLe" firstAttribute="leading" secondItem="qG4-Nu-l0f" secondAttribute="leading" id="XKz-Qo-R3h"/>
+                            <constraint firstItem="2jy-hV-xLe" firstAttribute="top" secondItem="qG4-Nu-l0f" secondAttribute="top" id="jaf-ab-v9y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qG4-Nu-l0f"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Rwc-hg-74g"/>
+                    <navigationItem key="navigationItem" id="fwK-Go-yu3"/>
+                    <size key="freeformSize" width="414" height="1000"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="00v-6m-cZz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gfa-xI-8Zm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4736" y="-92"/>
+            <point key="canvasLocation" x="5505.7971014492759" y="-188.16964285714286"/>
         </scene>
         <!--moderatelySevereDepression-->
         <scene sceneID="msQ-Es-GiK">
             <objects>
                 <viewController title="moderatelySevereDepression" id="2IC-uK-mqi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uAY-jg-ikR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqF-dh-ybW">
-                                <rect key="frame" x="45" y="217" width="324" height="462"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Your results indicate that you have none, or very few symptoms of depression.
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1X-fT-5XP">
+                                <rect key="frame" x="0.0" y="88" width="414" height="912"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUt-Yy-UU7" userLabel="ContentView">
+                                        <rect key="frame" x="8" y="0.0" width="406" height="912"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Moderately Severe Depression" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIT-hV-glm">
+                                                <rect key="frame" x="-4" y="38" width="414" height="38"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLu-G9-o6O">
+                                                <rect key="frame" x="8" y="104" width="390" height="769"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <mutableString key="text">Your results indicate that you may be experiencing symptoms of moderately severe depression. Based on your answers, living with these symptoms is causing difficulty managing relationships and even the tasks of everyday life.
 
-If you notice that your symptoms aren't improving, you may want to bring them up with someone you trust.
+These results do not mean that you have depression, but it may be time to start a conversation with someone you trust. If you are interested in learning more, check out the links below.
 
-This screen is not meant to be a diagnosis, or the elimination of a diagnosis.  A trained medical or mental health professional can help clarify issues and diagnose depression.
+This screen is not meant to be a diagnosis. Diagnosis and care of mental health conditions can be difficult. Having symptoms of depression is different than having depression. In addition, symptoms of depression can be caused by other mental health conditions, such as bipolar disorder, or other health problems, like a thyroid disorder. A trained professional, such as a doctor or a mental health provider, can make this determination and finding the right support can help you feel more like you again.
 
-If you feel like your feelings, thoughts, or behaviors get worse, screen again</string>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Moderately Severe Depression" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDY-wo-kyl">
-                                <rect key="frame" x="33" y="171" width="348" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+The depression symptoms you are experiencing may also indicate a different type of mental health problem related to bipolar disorder. We recommend you also take the screen for bipolar disorder to find out if your symptoms may be more similar to those experienced by people with bipolar disorder.  People who struggle with bipolar disorder experience mood swings from extreme elation, energy, or agitation to low depressive symptoms.</mutableString>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="uUt-Yy-UU7" firstAttribute="width" secondItem="O1X-fT-5XP" secondAttribute="width" multiplier="0.980676" id="4l1-sd-hvJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="uUt-Yy-UU7" secondAttribute="bottom" id="Ew6-p7-rjR"/>
+                                    <constraint firstItem="uUt-Yy-UU7" firstAttribute="leading" secondItem="O1X-fT-5XP" secondAttribute="leading" constant="8" id="Gn5-pH-Uer"/>
+                                    <constraint firstItem="uUt-Yy-UU7" firstAttribute="top" secondItem="O1X-fT-5XP" secondAttribute="top" id="WKo-0u-Lgp"/>
+                                    <constraint firstAttribute="trailing" secondItem="uUt-Yy-UU7" secondAttribute="trailing" id="Y6l-dq-DOj"/>
+                                    <constraint firstItem="uUt-Yy-UU7" firstAttribute="height" secondItem="O1X-fT-5XP" secondAttribute="height" priority="250" id="qhX-hK-gmO"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="a8U-XR-GXK"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="6JB-qY-ixG"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="O1X-fT-5XP" firstAttribute="leading" secondItem="nAn-3O-XKW" secondAttribute="leading" id="E7D-4S-fIS"/>
+                            <constraint firstItem="O1X-fT-5XP" firstAttribute="top" secondItem="nAn-3O-XKW" secondAttribute="top" id="Laf-FJ-Hvc"/>
+                            <constraint firstItem="nAn-3O-XKW" firstAttribute="trailing" secondItem="O1X-fT-5XP" secondAttribute="trailing" id="vCw-Tk-NvI"/>
+                            <constraint firstItem="O1X-fT-5XP" firstAttribute="bottom" secondItem="nAn-3O-XKW" secondAttribute="bottom" constant="34" id="wc0-qa-AHl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nAn-3O-XKW"/>
                     </view>
                     <navigationItem key="navigationItem" id="IEb-9h-1Ng"/>
+                    <size key="freeformSize" width="414" height="1000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tVo-eA-uNn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6228" y="-32"/>
+            <point key="canvasLocation" x="6208.6956521739139" y="-188.16964285714286"/>
         </scene>
         <!--severeDepression-->
         <scene sceneID="qd0-qS-2zZ">
             <objects>
                 <viewController title="severeDepression" id="jlk-mn-pX8" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ve4-hP-lXZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Severe Depression" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPS-Ah-T0q">
-                                <rect key="frame" x="85" y="200" width="244" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96z-hf-llz">
-                                <rect key="frame" x="45" y="217" width="324" height="462"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Your results indicate that you have none, or very few symptoms of depression.
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSb-TZ-zAC">
+                                <rect key="frame" x="0.0" y="88" width="414" height="912"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AJp-bx-Kt7" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="946"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Severe Depression" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXx-2N-bOi">
+                                                <rect key="frame" x="0.0" y="39" width="414" height="38"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQk-Z2-G4J">
+                                                <rect key="frame" x="8" y="96" width="398" height="782"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <mutableString key="text">Your responses indicate you may be at risk for harming yourself or someone else. Are you in crisis? Please call 911 or the National Suicide Prevention Hotline at 1-800-273-TALK or go immediately to the nearest emergency room. Your results indicate that you may be experiencing symptoms of severe depression. Based on your answers, these symptoms seem to be greatly interfering with your relationships and the tasks of everyday life.
 
-If you notice that your symptoms aren't improving, you may want to bring them up with someone you trust.
+These results do not mean that you have depression, but it may be time to start a conversation with someone you trust.If you are interested in learning more, check out the links below.
 
-This screen is not meant to be a diagnosis, or the elimination of a diagnosis.  A trained medical or mental health professional can help clarify issues and diagnose depression.
+This screen is not meant to be a diagnosis. Diagnosis and care of mental health conditions can be difficult. Having symptoms of depression is different than having depression. In addition, symptoms of depression can be caused by other mental health conditions, such as bipolar disorder, or other health problems, like a thyroid disorder. A trained professional, such as a doctor or a mental health provider, can make this determination and finding the right support can help you feel more like you again.
 
-If you feel like your feelings, thoughts, or behaviors get worse, screen again</string>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+The depression symptoms you are experiencing may also indicate a different type of mental health problem related to bipolar disorder. We recommend you also take the screen for bipolar disorder to find out if your symptoms may be more similar to those experienced by people with bipolar disorder.  People who struggle with bipolar disorder experience mood swings from extreme elation, energy, or agitation to low depressive symptoms.</mutableString>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AJp-bx-Kt7" firstAttribute="height" secondItem="XSb-TZ-zAC" secondAttribute="height" priority="250" id="8eR-Wm-Ngd"/>
+                                    <constraint firstAttribute="trailing" secondItem="AJp-bx-Kt7" secondAttribute="trailing" id="J44-sG-FHx"/>
+                                    <constraint firstItem="AJp-bx-Kt7" firstAttribute="width" secondItem="XSb-TZ-zAC" secondAttribute="width" id="QIx-1Y-qN7"/>
+                                    <constraint firstItem="AJp-bx-Kt7" firstAttribute="leading" secondItem="XSb-TZ-zAC" secondAttribute="leading" id="V5W-ax-Atf"/>
+                                    <constraint firstItem="AJp-bx-Kt7" firstAttribute="top" secondItem="XSb-TZ-zAC" secondAttribute="top" id="XRt-em-eAM"/>
+                                    <constraint firstAttribute="bottom" secondItem="AJp-bx-Kt7" secondAttribute="bottom" id="l3l-AV-kNR"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="coo-Ki-N0s"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="IGu-cV-Vn5"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XSb-TZ-zAC" firstAttribute="leading" secondItem="0bD-3n-DsM" secondAttribute="leading" id="L3x-cQ-X35"/>
+                            <constraint firstItem="XSb-TZ-zAC" firstAttribute="top" secondItem="0bD-3n-DsM" secondAttribute="top" id="Xzu-mN-112"/>
+                            <constraint firstItem="XSb-TZ-zAC" firstAttribute="bottom" secondItem="0bD-3n-DsM" secondAttribute="bottom" constant="34" id="Yzc-Eq-1Qw"/>
+                            <constraint firstItem="0bD-3n-DsM" firstAttribute="trailing" secondItem="XSb-TZ-zAC" secondAttribute="trailing" id="cAv-c4-GTm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0bD-3n-DsM"/>
                     </view>
                     <navigationItem key="navigationItem" id="Pc6-7x-Yab"/>
+                    <size key="freeformSize" width="414" height="1000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jUS-OD-mE5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6914" y="-188"/>
+            <point key="canvasLocation" x="6928.985507246377" y="-189.50892857142856"/>
         </scene>
         <!--Anxiety Test-->
         <scene sceneID="3wz-vS-bQc">
             <objects>
-                <viewController title="Anxiety Test" id="qCF-e5-equ" customClass="AnxietyController" customModule="Tests_For_Teens" customModuleProvider="target" propertyAccessControl="none" sceneMemberID="viewController">
+                <viewController title="Anxiety Test" id="qCF-e5-equ" customClass="AnxietyController" customModule="Tests_For_Teens" propertyAccessControl="none" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aL8-FM-VCN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -495,11 +539,331 @@ following problems?</string>
                     <connections>
                         <outlet property="lbl" destination="o2t-cr-Iir" id="thl-mR-RX5"/>
                         <segue destination="a8m-GR-ivf" kind="show" identifier="minimalAnxiety" id="kCQ-wX-tpu"/>
+                        <segue destination="cxB-0m-5k0" kind="show" identifier="mildAnxiety" id="cQU-L7-7Rc"/>
+                        <segue destination="CJ7-3M-jkv" kind="show" identifier="moderateAnxiety" id="Stp-59-zAu"/>
+                        <segue destination="sBz-ij-JKg" kind="show" identifier="severeAnxiety" id="Nbg-gG-rp7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jVr-nH-6qu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3319" y="542"/>
+        </scene>
+        <!--mildDepression-->
+        <scene sceneID="XbU-ht-bB2">
+            <objects>
+                <viewController title="mildDepression" id="C09-Pp-6ef" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gNE-1k-jD4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aba-RC-K4k">
+                                <rect key="frame" x="0.0" y="88" width="414" height="912"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ymd-nA-VY7" userLabel="ContentView">
+                                        <rect key="frame" x="8" y="-18" width="406" height="929"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mild Depression" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcM-U9-Z9l">
+                                                <rect key="frame" x="-16" y="81" width="414" height="38"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3b7-Ft-uQc">
+                                                <rect key="frame" x="8" y="146" width="390" height="763"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <mutableString key="text">Your results indicate that you may be experiencing some symptoms of mild depression. While your symptoms are not likely having a major impact on your life, it is important to monitor them.
+
+These results do not mean that you have depression, but it may be time to start a conversation with someone you trust. If you are interested in learning more, check out the links below.
+
+This screen is not meant to be a diagnosis. Diagnosis and care of mental health conditions can be difficult. Having symptoms of depression is different than having depression. In addition, symptoms of depression can be caused by other mental health conditions, such as bipolar disorder, or other health problems, like a thyroid disorder. A trained professional, such as a doctor or a mental health provider, can make this determination and finding the right support can help you feel more like you again.
+
+The depression symptoms you are experiencing may also indicate a different type of mental health problem related to bipolar disorder. We recommend you also take the screen for bipolar disorder to find out if your symptoms may be more similar to those experienced by people with bipolar disorder.  People who struggle with bipolar disorder experience mood swings from extreme elation, energy, or agitation to low depressive symptoms.</mutableString>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <accessibility key="accessibilityConfiguration" label="ContentView"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ymd-nA-VY7" secondAttribute="bottom" id="OUw-X7-h9Q"/>
+                                    <constraint firstItem="ymd-nA-VY7" firstAttribute="leading" secondItem="Aba-RC-K4k" secondAttribute="leading" constant="8" id="U9Z-da-Bdl"/>
+                                    <constraint firstItem="ymd-nA-VY7" firstAttribute="top" secondItem="Aba-RC-K4k" secondAttribute="top" constant="-18" id="ggm-8E-QBe"/>
+                                    <constraint firstItem="ymd-nA-VY7" firstAttribute="width" secondItem="Aba-RC-K4k" secondAttribute="width" multiplier="0.980676" id="hqc-6a-BeC"/>
+                                    <constraint firstAttribute="trailing" secondItem="ymd-nA-VY7" secondAttribute="trailing" id="qux-CF-NjR"/>
+                                    <constraint firstItem="ymd-nA-VY7" firstAttribute="height" secondItem="Aba-RC-K4k" secondAttribute="height" multiplier="1.01883" priority="250" id="zMd-jr-pEH"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="PHX-gu-AAd"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="ck3-jB-Did"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Aba-RC-K4k" firstAttribute="leading" secondItem="cpU-q3-20D" secondAttribute="leading" id="42y-zg-6Wh"/>
+                            <constraint firstItem="Aba-RC-K4k" firstAttribute="top" secondItem="cpU-q3-20D" secondAttribute="top" id="AOE-05-ntB"/>
+                            <constraint firstItem="Aba-RC-K4k" firstAttribute="bottom" secondItem="cpU-q3-20D" secondAttribute="bottom" constant="34" id="JRa-hF-U0a"/>
+                            <constraint firstItem="cpU-q3-20D" firstAttribute="trailing" secondItem="Aba-RC-K4k" secondAttribute="trailing" id="XXg-xT-5JY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cpU-q3-20D"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sqe-T5-1aT"/>
+                    <size key="freeformSize" width="414" height="1000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pDR-eV-uxa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4773.913043478261" y="-154.01785714285714"/>
+        </scene>
+        <!--Insomnia Test-->
+        <scene sceneID="S4q-jT-bXY">
+            <objects>
+                <viewController storyboardIdentifier="insomniaTest" title="Insomnia Test" id="jQ9-9E-Tbc" customClass="InsomniaController" customModule="Tests_For_Teens" propertyAccessControl="none" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vft-FK-ePX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap either TRUE or FALSE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWo-e0-IF7">
+                                <rect key="frame" x="108.5" y="113" width="197.5" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYv-3X-mIs">
+                                <rect key="frame" x="0.0" y="232" width="414" height="38"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OAi-Fp-zHK">
+                                <rect key="frame" x="0.0" y="297" width="414" height="93"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3T1-jA-y0f">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                        <state key="normal" title="ansI1"/>
+                                        <connections>
+                                            <action selector="action:" destination="jQ9-9E-Tbc" eventType="touchUpInside" id="wFy-Ii-wgQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCK-xO-mcZ">
+                                        <rect key="frame" x="0.0" y="49" width="414" height="44"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                        <state key="normal" title="ansI2"/>
+                                        <connections>
+                                            <action selector="action:" destination="jQ9-9E-Tbc" eventType="touchUpInside" id="oMM-J6-O6W"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JAm-sl-nfA" firstAttribute="trailing" secondItem="OAi-Fp-zHK" secondAttribute="trailing" id="1Ct-Bo-NIt"/>
+                            <constraint firstItem="JAm-sl-nfA" firstAttribute="trailing" secondItem="BYv-3X-mIs" secondAttribute="trailing" id="8Dy-9U-R3N"/>
+                            <constraint firstItem="BYv-3X-mIs" firstAttribute="centerX" secondItem="vft-FK-ePX" secondAttribute="centerX" id="DKj-nB-I8q"/>
+                            <constraint firstItem="QWo-e0-IF7" firstAttribute="centerX" secondItem="vft-FK-ePX" secondAttribute="centerX" id="Hki-eM-Bu5"/>
+                            <constraint firstItem="BYv-3X-mIs" firstAttribute="leading" secondItem="JAm-sl-nfA" secondAttribute="leading" id="Okc-OQ-X1u"/>
+                            <constraint firstItem="BYv-3X-mIs" firstAttribute="top" secondItem="QWo-e0-IF7" secondAttribute="bottom" constant="96.5" id="PnG-7d-Nqu"/>
+                            <constraint firstItem="OAi-Fp-zHK" firstAttribute="centerX" secondItem="vft-FK-ePX" secondAttribute="centerX" id="eNi-om-phE"/>
+                            <constraint firstItem="OAi-Fp-zHK" firstAttribute="top" secondItem="BYv-3X-mIs" secondAttribute="bottom" constant="27" id="hLx-eK-0xJ"/>
+                            <constraint firstItem="OAi-Fp-zHK" firstAttribute="leading" secondItem="JAm-sl-nfA" secondAttribute="leading" id="mBI-rK-qip"/>
+                            <constraint firstItem="QWo-e0-IF7" firstAttribute="top" secondItem="JAm-sl-nfA" secondAttribute="top" constant="25" id="uQp-ga-G3U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JAm-sl-nfA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2lp-Kf-b7G"/>
+                    <connections>
+                        <outlet property="lbl" destination="BYv-3X-mIs" id="YWD-CL-GfC"/>
+                        <segue destination="MiN-TN-SjJ" kind="show" identifier="insomniaSymptoms" id="sOE-6o-f5l"/>
+                        <segue destination="1Nr-1U-mnd" kind="show" identifier="noInsomniaSymptoms" id="VfO-VA-k6N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bsq-nx-8Gm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3319" y="-863"/>
+        </scene>
+        <!--insomniaSymptoms-->
+        <scene sceneID="VTz-Zg-sc8">
+            <objects>
+                <viewController title="insomniaSymptoms" id="MiN-TN-SjJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e9v-J6-bpu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="INFO" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfc-ka-ZUg">
+                                <rect key="frame" x="45" y="256" width="324" height="462"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You show symptoms of insomnia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1V-X3-aDG">
+                                <rect key="frame" x="35" y="166" width="345" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="iMF-I2-GcY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PJe-JL-Vb0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oHZ-ng-QCs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4041" y="-863"/>
+        </scene>
+        <!--noInsomniaSymptoms-->
+        <scene sceneID="Vny-XH-ODo">
+            <objects>
+                <viewController title="noInsomniaSymptoms" id="1Nr-1U-mnd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UKP-4T-sDC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="INFO" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABM-rm-Sng">
+                                <rect key="frame" x="45" y="256" width="324" height="462"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You do not show symptoms of insomnia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0F-I2-jEn">
+                                <rect key="frame" x="0.0" y="166" width="414" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="nxv-kD-b0t"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="axc-2T-FMz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JpZ-wi-D88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4774" y="-863"/>
+        </scene>
+        <!--mildAnxiety-->
+        <scene sceneID="clI-L0-EzB">
+            <objects>
+                <viewController title="mildAnxiety" id="cxB-0m-5k0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CRY-Jh-a41">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mild Anxiety" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGG-rX-k4X">
+                                <rect key="frame" x="0.0" y="200" width="414" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fN7-dI-SpC">
+                                <rect key="frame" x="20" y="286" width="374" height="325"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Your results indicate that you have none or very few symptoms of anxiety.
+
+If you notice that your symptoms aren't improving or get worse, you may want to bring them up with someone you trust or rescreen.
+
+This screen is not meant to be a diagnosis, or the elimination of a diagnosis.  A trained medical professional can diagnose anxiety.
+
+If you feel like your feelings, thoughts, or behaviors get worse, screen again. </string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="nA2-xO-U5b"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zkg-gi-twE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jl9-bE-sBy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4773.913043478261" y="541.74107142857144"/>
+        </scene>
+        <!--moderateAnxiety-->
+        <scene sceneID="788-1G-Vgg">
+            <objects>
+                <viewController title="moderateAnxiety" id="CJ7-3M-jkv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LG3-OP-uuq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Moderate Anxiety" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1i-zr-akv">
+                                <rect key="frame" x="0.0" y="157" width="414" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRR-dS-HCQ">
+                                <rect key="frame" x="20" y="203" width="374" height="650"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Your results indicate that you may be experiencing symptoms of moderate anxiety. Based on your answers, living with these symptoms could be causing difficulty managing relationships and even the tasks of everyday life.
+
+These results do not mean that you have anxiety disorder, but it may be time to start a conversation with someone you trust to explore what is going on and how things can get better. If you are interested in learning more, check out the links below.
+
+This screen is not meant to be a formal diagnosis but is a good way to identify if anxiety is possible problem. Having symptoms of anxiety is different than having an anxiety disorder. In addition, symptoms of anxiety can be caused by other mental health conditions, or other health problems, like a thyroid disorder. A trained professional, such as a doctor or a mental health provider, can make this determination.
+
+Anxiety symptoms are often accompanied by symptoms of depression. We recommend you also take the screen for depression.</string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="9da-GN-dFQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ETu-90-2d2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CGq-1j-IzK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5505.7971014492759" y="541.74107142857144"/>
+        </scene>
+        <!--severeAnxiety-->
+        <scene sceneID="ULX-TU-m6h">
+            <objects>
+                <viewController title="severeAnxiety" id="sBz-ij-JKg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bdC-vr-MIf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Severe Anxiety" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JF2-lI-mYD">
+                                <rect key="frame" x="0.0" y="155" width="414" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tce-8D-4hU">
+                                <rect key="frame" x="20" y="215" width="374" height="616"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Your results indicate that you may be experiencing symptoms of severe anxiety. Based on your answers, these symptoms seem to be greatly interfering with your relationships and the tasks of everyday life.
+
+These results do not mean that you have anxiety disorder, but it may be time to start a conversation with someone you trust to explore what is going on and how things can get better. If you are interested in learning more, check out the links below.
+
+This screen is not meant to be a formal diagnosis but is a good way to identify if anxiety is possible problem. Having symptoms of anxiety is different than having an anxiety disorder. In addition, symptoms of anxiety can be caused by other mental health conditions, or other health problems, like a thyroid disorder. A trained professional, such as a doctor or a mental health provider, can make this determination.
+
+Anxiety symptoms are often accompanied by symptoms of depression. We recommend you also take the screen for depression.</string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="axX-Vv-nBo"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SFK-kQ-PYV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="grS-MD-fGT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6208.6956521739139" y="541.74107142857144"/>
         </scene>
     </scenes>
 </document>

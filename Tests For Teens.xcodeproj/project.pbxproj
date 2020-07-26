@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		493656A624C4BCBF000C4124 /* AnxietyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493656A524C4BCBF000C4124 /* AnxietyController.swift */; };
+		FB35E76324C4C7DD0066DDCB /* InsomniaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35E76224C4C7DD0066DDCB /* InsomniaController.swift */; };
 		FB5CBF5D24ADCF0C00FE8B23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5CBF5C24ADCF0C00FE8B23 /* AppDelegate.swift */; };
 		FB5CBF5F24ADCF0C00FE8B23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5CBF5E24ADCF0C00FE8B23 /* SceneDelegate.swift */; };
 		FB5CBF6124ADCF0C00FE8B23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5CBF6024ADCF0C00FE8B23 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		493656A524C4BCBF000C4124 /* AnxietyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnxietyController.swift; sourceTree = "<group>"; };
+		FB35E76224C4C7DD0066DDCB /* InsomniaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsomniaController.swift; sourceTree = "<group>"; };
 		FB5CBF5924ADCF0C00FE8B23 /* Tests For Teens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tests For Teens.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB5CBF5C24ADCF0C00FE8B23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB5CBF5E24ADCF0C00FE8B23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				FB5CBF6724ADCF1700FE8B23 /* LaunchScreen.storyboard */,
 				FB5CBF6A24ADCF1700FE8B23 /* Info.plist */,
 				493656A524C4BCBF000C4124 /* AnxietyController.swift */,
+				FB35E76224C4C7DD0066DDCB /* InsomniaController.swift */,
 			);
 			path = "Tests For Teens";
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				493656A624C4BCBF000C4124 /* AnxietyController.swift in Sources */,
 				FB5CBF6124ADCF0C00FE8B23 /* ViewController.swift in Sources */,
+				FB35E76324C4C7DD0066DDCB /* InsomniaController.swift in Sources */,
 				FB5CBF5D24ADCF0C00FE8B23 /* AppDelegate.swift in Sources */,
 				FB5CBF5F24ADCF0C00FE8B23 /* SceneDelegate.swift in Sources */,
 			);

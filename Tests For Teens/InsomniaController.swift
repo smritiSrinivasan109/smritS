@@ -62,6 +62,7 @@ class InsomniaController: UIViewController {
         } else if currentIQuestion == questionsI.count {
             endQuiz() // this will have the end result & the resources
             currentIQuestion = 0
+            scoreI=0
         }
     }
     
@@ -88,9 +89,7 @@ class InsomniaController: UIViewController {
                 button.setTitle(answersI[currentIQuestion][0], for: .normal)
             } else if (i == Int(ansI2)) {
                 button.setTitle(answersI[currentIQuestion][1], for: .normal)
-            } else {
-                button.setTitle(answersI[currentIQuestion][2], for: .normal)
-            }
+            } 
         }
         
         
